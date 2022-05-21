@@ -3,9 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bottom_sheet_round.xml" value="0.142" />
+        <entry key="app/src/main/res/drawable/checkbox_bg.xml" value="0.142" />
+        <entry key="app/src/main/res/drawable/custom_background_check.xml" value="0.142" />
+        <entry key="app/src/main/res/drawable/custom_background_header.xml" value="0.2764068603515625" />
+        <entry key="app/src/main/res/drawable/custom_bottom_sheet_bg.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/custom_movie.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19542709706160558" />
+        <entry key="app/src/main/res/drawable/ic_radio_group_selected.xml" value="0.142" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.27984344422700586" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/custom_movie.xml" value="0.4382212320963541" />
+        <entry key="app/src/main/res/layout/fragment_description.xml" value="0.2485449307206748" />
       </map>
     </option>
   </component>
