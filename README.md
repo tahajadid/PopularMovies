@@ -3,7 +3,7 @@
 Android App use MVVM architecture.
 
 ## Features
-------
+
 . Show The popular Movies in al the world
 . Filter By Descending & Ascending by the title
 
