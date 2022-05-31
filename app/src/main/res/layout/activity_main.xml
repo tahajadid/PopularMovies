@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/slider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2"
@@ -143,6 +143,48 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.41"
         app:srcCompat="@drawable/filter" />
+
+    <HorizontalScrollView
+        android:id="@+id/slider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.example.popularmovies.ui.PlanSliderItemView
+                android:id="@+id/trendingMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sliderItemIndex="1"
+                app:sliderItemIsChecked="true"
+                app:sliderItemTitle="Trending Movie" />
+
+            <com.example.popularmovies.ui.PlanSliderItemView
+                android:id="@+id/upcomingMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sliderItemIndex="2"
+                app:sliderItemIsChecked="false"
+                app:sliderItemTitle="Upcoming Movies" />
+
+            <com.example.popularmovies.ui.PlanSliderItemView
+                android:id="@+id/popularMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sliderItemIndex="3"
+                app:sliderItemIsChecked="false"
+                app:sliderItemTitle="Popular Movies" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

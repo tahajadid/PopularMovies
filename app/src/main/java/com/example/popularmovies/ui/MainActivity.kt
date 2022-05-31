@@ -19,30 +19,20 @@ class MainActivity : AppCompatActivity() {
     var listMovies: MutableList<Results> = ArrayList()
     var viewModel = MoviesViewModel()
     private var isHide = true
+    var index = 0
     private lateinit var checkboxOne: CheckBox
     private lateinit var checkboxTwo: CheckBox
     private lateinit var imageFilter: ImageView
     private lateinit var recylerView: RecyclerView
     private lateinit var filterContainer: ConstraintLayout
     private lateinit var filterView: View
+    private lateinit var trendingMovie: PlanSliderItemView
+    private lateinit var upcomingMovie: PlanSliderItemView
+    private lateinit var popularMovie: PlanSliderItemView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        viewModel.getMovies()
-
-        var index = 0
-
-        viewModel.responseGetMovies.observe(this) {
-            it?.forEach {
-                listMovies.add(index, it)
-                Log.d("AllValues", "==== TITLE " + it.title.toString())
-                index++
-            }
-
-            setData()
-        }
 
         checkboxOne = findViewById(R.id.check_box_one)
         checkboxTwo = findViewById(R.id.check_box_two)
@@ -50,6 +40,23 @@ class MainActivity : AppCompatActivity() {
         recylerView = findViewById(R.id.listofMovies)
         filterContainer = findViewById(R.id.filter_container)
         filterView = findViewById(R.id.view3)
+        trendingMovie = findViewById(R.id.trendingMovie)
+        upcomingMovie = findViewById(R.id.upcomingMovie)
+        popularMovie = findViewById(R.id.popularMovie)
+
+        trendingMovie.setOnClickListener {
+            getTrendingMoviesData()
+        }
+
+        upcomingMovie.setOnClickListener {
+            getUpcomingMoviesData()
+        }
+
+        popularMovie.setOnClickListener {
+            getPopularMovies()
+        }
+
+        getTrendingMoviesData()
 
         initView()
     }
@@ -86,6 +93,60 @@ class MainActivity : AppCompatActivity() {
                 sortAscending()
                 checkboxOne.isChecked = false
             }
+        }
+    }
+
+    fun getTrendingMoviesData() {
+        viewModel.getTrendongMovies()
+
+        trendingMovie.setChecked(true)
+        upcomingMovie.setChecked(false)
+        popularMovie.setChecked(false)
+
+        viewModel.responseGetTrendingMovies.observe(this) {
+            it?.forEach {
+                listMovies.add(index, it)
+                Log.d("AllValues", "==== TITLE " + it.title.toString())
+                index++
+            }
+
+            setData()
+        }
+    }
+
+    fun getUpcomingMoviesData() {
+        viewModel.getUpcomingMovies()
+
+        trendingMovie.setChecked(false)
+        upcomingMovie.setChecked(true)
+        popularMovie.setChecked(false)
+
+        viewModel.responseGetUpcomingMovies.observe(this) {
+            it?.forEach {
+                listMovies.add(index, it)
+                Log.d("AllValues", "==== TITLE " + it.title.toString())
+                index++
+            }
+
+            setData()
+        }
+    }
+
+    fun getPopularMovies() {
+        viewModel.getMovies()
+
+        trendingMovie.setChecked(false)
+        upcomingMovie.setChecked(false)
+        popularMovie.setChecked(true)
+
+        viewModel.responseGetMovies.observe(this) {
+            it?.forEach {
+                listMovies.add(index, it)
+                Log.d("AllValues", "==== TITLE " + it.title.toString())
+                index++
+            }
+
+            setData()
         }
     }
 

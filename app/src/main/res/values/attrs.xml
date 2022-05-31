@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PlanSliderItemView">
+        <attr name="sliderItemTitle" format="string" />
+        <attr name="sliderItemIndex" format="string" />
+        <attr name="sliderItemIsChecked" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="TrackingItemDelivery">
+        <attr name="TrackingItemIsChecked" format="boolean" />
+    </declare-styleable>
+</resources>
