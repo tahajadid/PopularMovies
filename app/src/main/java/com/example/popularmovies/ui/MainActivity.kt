@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.GridLayoutManager
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var trendingMovie: PlanSliderItemView
     private lateinit var upcomingMovie: PlanSliderItemView
     private lateinit var popularMovie: PlanSliderItemView
+    private lateinit var progress: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         trendingMovie = findViewById(R.id.trendingMovie)
         upcomingMovie = findViewById(R.id.upcomingMovie)
         popularMovie = findViewById(R.id.popularMovie)
+        progress = findViewById(R.id.progressBar)
 
         trendingMovie.setOnClickListener {
             getTrendingMoviesData()
@@ -103,13 +106,16 @@ class MainActivity : AppCompatActivity() {
         upcomingMovie.setChecked(false)
         popularMovie.setChecked(false)
 
+        listMovies = ArrayList()
+        index = 0
+
         viewModel.responseGetTrendingMovies.observe(this) {
             it?.forEach {
                 listMovies.add(index, it)
                 Log.d("AllValues", "==== TITLE " + it.title.toString())
                 index++
             }
-
+            progress.visibility = View.GONE
             setData()
         }
     }
@@ -120,6 +126,9 @@ class MainActivity : AppCompatActivity() {
         trendingMovie.setChecked(false)
         upcomingMovie.setChecked(true)
         popularMovie.setChecked(false)
+
+        listMovies = ArrayList()
+        index = 0
 
         viewModel.responseGetUpcomingMovies.observe(this) {
             it?.forEach {
@@ -139,6 +148,9 @@ class MainActivity : AppCompatActivity() {
         upcomingMovie.setChecked(false)
         popularMovie.setChecked(true)
 
+        listMovies = ArrayList()
+        index = 0
+
         viewModel.responseGetMovies.observe(this) {
             it?.forEach {
                 listMovies.add(index, it)
@@ -153,7 +165,7 @@ class MainActivity : AppCompatActivity() {
     fun hideFilterView() {
         imageFilter.setImageResource(R.drawable.filter_on)
         val param = recylerView.layoutParams as ViewGroup.MarginLayoutParams
-        param.setMargins(0, 130, 0, 0)
+        param.setMargins(0, 120, 0, 0)
         recylerView.layoutParams = param // Tested!! - Y
         filterContainer.visibility = View.VISIBLE
         filterView.visibility = View.VISIBLE
@@ -176,6 +188,7 @@ class MainActivity : AppCompatActivity() {
             layoutManager = GridLayoutManager(this@MainActivity, 2)
             adapter = moviesAdapter
         }
+        moviesAdapter.notifyDataSetChanged()
     }
 
     fun sortAscending() {
