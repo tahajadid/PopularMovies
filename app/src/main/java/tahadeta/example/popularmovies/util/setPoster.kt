@@ -1,4 +1,4 @@
-package com.example.popularmovies.util
+package tahadeta.example.popularmovies.util
 
 import android.content.Context
 import android.widget.ImageView

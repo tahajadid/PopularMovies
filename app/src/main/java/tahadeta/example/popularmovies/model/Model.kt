@@ -1,4 +1,4 @@
-package com.example.popularmovies.model
+package tahadeta.example.popularmovies.model
 
 import com.google.gson.annotations.SerializedName
 

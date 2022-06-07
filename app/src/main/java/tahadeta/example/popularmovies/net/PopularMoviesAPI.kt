@@ -1,9 +1,9 @@
-package com.example.popularmovies.net
+package tahadeta.example.popularmovies.net
 
-import com.example.popularmovies.model.Model
-import com.example.popularmovies.util.Constants.TOP_RATED_WITH_TOKEN
-import com.example.popularmovies.util.Constants.TRENDING_WITH_TOKEN
-import com.example.popularmovies.util.Constants.UPCOMING_WITH_TOKEN
+import tahadeta.example.popularmovies.model.Model
+import tahadeta.example.popularmovies.util.Constants.TOP_RATED_WITH_TOKEN
+import tahadeta.example.popularmovies.util.Constants.TRENDING_WITH_TOKEN
+import tahadeta.example.popularmovies.util.Constants.UPCOMING_WITH_TOKEN
 import retrofit2.Response
 import retrofit2.http.GET
 

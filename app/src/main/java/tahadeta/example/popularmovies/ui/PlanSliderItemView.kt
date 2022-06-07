@@ -1,4 +1,4 @@
-package com.example.popularmovies.ui
+package tahadeta.example.popularmovies.ui
 
 import android.content.Context
 import android.util.AttributeSet

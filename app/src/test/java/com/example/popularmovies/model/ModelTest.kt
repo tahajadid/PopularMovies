@@ -2,6 +2,8 @@ package com.example.popularmovies.model
 
 import junit.framework.Assert
 import org.junit.Test
+import tahadeta.example.popularmovies.model.Model
+import tahadeta.example.popularmovies.model.Results
 
 class ModelTest {
 

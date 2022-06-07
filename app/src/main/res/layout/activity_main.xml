@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context="tahadeta.example.popularmovies.ui.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listofMovies"
@@ -159,7 +159,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.example.popularmovies.ui.PlanSliderItemView
+            <tahadeta.example.popularmovies.ui.PlanSliderItemView
                 android:id="@+id/trendingMovie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
                 app:sliderItemIsChecked="true"
                 app:sliderItemTitle="Trending Movie" />
 
-            <com.example.popularmovies.ui.PlanSliderItemView
+            <tahadeta.example.popularmovies.ui.PlanSliderItemView
                 android:id="@+id/upcomingMovie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -175,7 +175,7 @@
                 app:sliderItemIsChecked="false"
                 app:sliderItemTitle="Upcoming Movies" />
 
-            <com.example.popularmovies.ui.PlanSliderItemView
+            <tahadeta.example.popularmovies.ui.PlanSliderItemView
                 android:id="@+id/popularMovie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

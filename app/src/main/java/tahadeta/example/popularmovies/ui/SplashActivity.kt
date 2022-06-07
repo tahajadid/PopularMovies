@@ -1,4 +1,4 @@
-package com.example.popularmovies.ui
+package tahadeta.example.popularmovies.ui
 
 import android.animation.Animator
 import android.app.Dialog

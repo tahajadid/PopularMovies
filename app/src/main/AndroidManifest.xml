@@ -14,7 +14,7 @@
         android:theme="@style/Theme.PopularMovies">
 
         <activity
-            android:name=".ui.SplashActivity"
+            android:name="tahadeta.example.popularmovies.ui.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
         </activity>
 
         <activity
-            android:name=".ui.MainActivity"
+            android:name="tahadeta.example.popularmovies.ui.MainActivity"
             android:exported="false">
 
         </activity>

@@ -1,4 +1,4 @@
-package com.example.popularmovies.model
+package tahadeta.example.popularmovies.model
 
 import com.google.gson.annotations.SerializedName
 
@@ -17,6 +17,7 @@ data class Results(
     @SerializedName("title") var title: String? = null,
     @SerializedName("video") var video: Boolean? = null,
     @SerializedName("vote_average") var voteAverage: Double? = null,
-    @SerializedName("vote_count") var voteCount: Int? = null
+    @SerializedName("vote_count") var voteCount: Int? = null,
+    @SerializedName("name") var name: String? = null
 
 )

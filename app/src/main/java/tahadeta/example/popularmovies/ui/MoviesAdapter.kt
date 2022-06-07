@@ -1,4 +1,4 @@
-package com.example.popularmovies.ui
+package tahadeta.example.popularmovies.ui
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.R
-import com.example.popularmovies.model.Results
-import com.example.popularmovies.util.setPoster
+import tahadeta.example.popularmovies.model.Results
+import tahadeta.example.popularmovies.util.setPoster
 
 class MoviesAdapter(
     private val context: Context?,
@@ -26,7 +26,11 @@ class MoviesAdapter(
         private val imageView: ImageView = itemView.findViewById(R.id.movieImage)
 
         fun bindView(item: Results, position: Int, context: Context?) {
-            movieTitle.text = item.title
+            if (item.title != null) {
+                movieTitle.text = item.title
+            } else {
+                movieTitle.text = item.name
+            }
             ratedNumber.text = item.voteAverage.toString()
             peopleNumber.text = item.voteCount.toString()
             setPoster().setImageGlid(context!!, imageView, item.posterPath.toString())

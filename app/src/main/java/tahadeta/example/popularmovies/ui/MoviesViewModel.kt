@@ -1,12 +1,12 @@
-package com.example.popularmovies.ui
+package tahadeta.example.popularmovies.ui
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.popularmovies.model.Results
-import com.example.popularmovies.net.PopularMoviesAPI
-import com.example.popularmovies.net.RetrofitClient
-import com.example.popularmovies.util.BaseViewModel
+import tahadeta.example.popularmovies.model.Results
+import tahadeta.example.popularmovies.net.PopularMoviesAPI
+import tahadeta.example.popularmovies.net.RetrofitClient
+import tahadeta.example.popularmovies.util.BaseViewModel
 
 class MoviesViewModel : BaseViewModel() {
 

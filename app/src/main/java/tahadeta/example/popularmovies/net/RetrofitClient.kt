@@ -1,6 +1,6 @@
-package com.example.popularmovies.net
+package tahadeta.example.popularmovies.net
 
-import com.example.popularmovies.util.Constants.BASE_URL
+import tahadeta.example.popularmovies.util.Constants.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

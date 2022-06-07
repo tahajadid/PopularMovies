@@ -1,4 +1,4 @@
-package com.example.popularmovies.ui
+package tahadeta.example.popularmovies.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.popularmovies.R
-import com.example.popularmovies.model.Results
+import tahadeta.example.popularmovies.model.Results
 
 class MainActivity : AppCompatActivity() {
 
