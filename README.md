@@ -1,11 +1,10 @@
+# PopularMovies
 <center>
 <a href="https://play.google.com/store/apps/details?id=tahadeta.example.popularmovies">
 <img src="https://github.com/tahajadid/MASCover/blob/main/play_store_icon.png" width="180" height="70"/></a>
 </center>
 
-# PopularMovies
-
-Android App use MVVM architecture.
+This Application was made witgh MVVM Architecture, with network calls to get list of movies from MovbieDB.
 
 ## Features
 
